@@ -1,49 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Maha Amjad Khan's Portfolio</title>
+    <title>Maha Amjad Khan's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
 </head>
-
 <body>
-    <header>
-        <h1>Maha Amjad Khan</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-        </ul>
-    </nav>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>With a fusion of barista charm and coding prowess, Maha isn't your everyday Computer Science enthusiast. Eager to dive into a co-op role in the Computer Science department, she brings a unique blend of interpersonal skills and technical acumen. Her goal? To not just code, but to craft solutions, innovate, and elevate the team's dynamics while navigating the intricate world of software development.</p>
-    </section>
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Python</li>
-            <li>Java</li>
-            <li>JavaScript</li>
-            <!-- Add other skills here -->
-        </ul>
-    </section>
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Don't Stop Game</h3>
-            <p>Description of the game.</p>
-        </div>
-        <!-- Add other projects similarly -->
-    </section>
-    <footer>
-        <p>&copy; 2024 [Your Name]. All rights reserved.</p>
-    </footer>
-</body>
+    <div class="container">
+        <header>
+            <h1>Maha Amjad Khan</h1>
+            <p>Computer Science Enthusiast | St. John’s NL, CA</p>
+        </header>
+        <main>
+            <section class="collapsible-section">
+                <button class="collapsible">About Me</button>
+                <div class="content">
+                    <p>I am a passionate Computer Science student at Memorial University, with a keen interest in software development and data science. My journey in tech started with my curiosity in solving real-world problems through technology.</p>
+                </div>
+            </section>
 
+            <section class="collapsible-section">
+                <button class="collapsible">Education</button>
+                <div class="content">
+                    <p>Navigating the realms of technology and innovation, I am currently honing my skills and shaping my future at Memorial University of Newfoundland, with a vision to graduate as a Computer Science expert by May 2025.</p>
+                </div>
+            </section>
+
+            <section class="collapsible-section">
+                <button class="collapsible">Skills</button>
+                <div class="content">
+                    <h3>Programming Languages</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>JavaScript</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+                    <h3>Libraries & Frameworks</h3>
+                    <ul>
+                        <li>Java Swing</li>
+                        <li>Turtle</li>
+                        <li>Bootstrap</li>
+                        <li>Tailwind</li>
+                        <li>jQuery</li>
+                    </ul>
+                    <h3>Tools & Environments</h3>
+                    <ul>
+                        <li>Git</li>
+                        <li>GitHub</li>
+                        <li>Trello</li>
+                        <li>Visual Studio Code</li>
+                        <li>Eclipse</li>
+                        <li>Slack</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="collapsible-section">
+                <button class="collapsible">Projects</button>
+                <div class="content">
+                    <h3>"Can't Stop" - Java Game (Software Engineering Final Project)</h3>
+                    <p>Developed an interactive game utilizing Java and the Swing library. Collaborated with peers to design and implement game features and mechanics. Conducted testing to ensure smooth user experience and gameplay.</p>
+
+                    <h3>Data Transformation with Python (Data Preparation and Classification Analysis: Enhancing Wine Quality Prediction)</h3>
+                    <p>Conducted a hands-on project involving data preparation and classification analysis using Python and essential Data Science and Machine Learning libraries. Explored classification concepts, built predictive models, and evaluated their accuracy, showcasing proficiency in data analysis and machine learning techniques.</p>
+
+                    <h3>Personal Web Portfolio (mahaakhan.com)</h3>
+                    <p>Designed and developed a web portfolio showcasing academic projects, skills, and professional experience. Utilized HTML, CSS, and JavaScript to ensure a responsive and interactive user experience. Incorporated SEO practices to optimize web visibility and reach.</p>
+
+                    <h3>Shopify Product Management App</h3>
+                    <p>Engineered a React-based application to streamline the product uploading and organizing process for a local organization’s Shopify store. Collaborated with stakeholders to gather requirements and ensure the app met organizational needs. Implemented RESTful APIs to facilitate efficient data exchange and enhance functionality.</p>
+                </div>
+            </section>
+
+            <section class="collapsible-section">
+                <button class="collapsible">Experience</button>
+                <div class="content">
+                    <h3>Barista/Customer Service Representative</h3>
+                    <p>At the Newfoundland Chocolate Company since May 2022, I've been brewing success one cup at a time! My role goes beyond serving coffee; it's about delivering exceptional customer service, collaborating effectively during peak hours, training new team members with a focus on service quality, and contributing to a positive and efficient work environment.</p>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Maha Amjad Khan. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
 </html>
