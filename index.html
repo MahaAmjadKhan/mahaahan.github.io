@@ -391,6 +391,15 @@
     form.addEventListener('submit', function (e) {
     e.preventDefault(); // Prevent the default form submission
 
+    var recaptchaResponse = grecaptcha.getResponse();
+
+    // Check if the user has completed the CAPTCHA
+    if (recaptchaResponse.length == 0) {
+      alert('Please complete the CAPTCHA!');
+    } else {
+      // CAPTCHA was solved, proceed with your form submission or logic
+      alert('CAPTCHA solved successfully!');
+
     const formData = new FormData(form);
     const object = {};
     formData.forEach((value, key) => object[key] = value);
