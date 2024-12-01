@@ -392,31 +392,9 @@
     e.preventDefault(); // Prevent the default form submission
 
 
-    const recaptchaResponse = grecaptcha.getResponse();
+    
 
-        // If CAPTCHA is not completed, show an error
-        if (recaptchaResponse === "") {
-          alert("Please verify that you are not a robot.");
-          return;
-        }
-
-        // Create a form data object to send with the request
-        const formData = new FormData(document.querySelector('.php-email-form'));
-        formData.append("recaptcha_response", recaptchaResponse);
-
-        // Send the form data to Google Apps Script via a POST request
-        fetch("https://script.google.com/macros/s/AKfycbxV_mM2YXYLgppzKS-6HFVmeBL_PEyH6w7TVh6nN_B1Oyh7eYFcyLxgtYf6_74sLg-M/exec", {
-          method: "POST",
-          body: formData
-        })
-          .then(response => response.json())
-          .then(data => {
-            if (data.success) {
-              alert("Form submitted successfully!");
-            } else {
-              alert("CAPTCHA validation failed. Please try again.");
-            }
-          });
+      
 
 
 
