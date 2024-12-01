@@ -398,9 +398,8 @@
       alert('Please complete the CAPTCHA!');
     } else {
       // CAPTCHA was solved, proceed with your form submission or logic
-      alert('CAPTCHA solved successfully!');}
 
-    const formData = new FormData(form);
+      const formData = new FormData(form);
     const object = {};
     formData.forEach((value, key) => object[key] = value);
     const json = JSON.stringify(object);
@@ -422,6 +421,12 @@
           console.error('Error:', error);
           document.getElementById('form-message').textContent = 'Sorry, we can\'t send the message now. We\'re looking into it.';
     });
+
+
+      
+      alert('CAPTCHA solved successfully!');}
+
+    
   });
 });
 
